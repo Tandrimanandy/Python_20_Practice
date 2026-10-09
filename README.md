@@ -1,4 +1,4 @@
-# Python Lab Examination: Question Solutions
+# Python Questions and Answers 1 to 7
 
 This repository contains Python solutions for the Python Lab Examination. Each question is written as a separate function, and each file calls its function to show the output. The project is ongoing, and more questions will be added.
 
