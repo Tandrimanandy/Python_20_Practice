@@ -7,10 +7,10 @@ This repository contains Python solutions for the Python Lab Examination. Each q
 | Section | Questions | Files | Status |
 |---|---|---|---|
 | Lists | 1 to 7 | q1.py, q2.py, q3.py, q4.py, 5th.py, 6th.py, q7.py | Completed |
-| Tuples | 8 to 13 | Section B_Tuple folder: q8.py, q9.py, q10, q11.py, q12.py | In progress |
-| Dictionaries | 14 to 20 | Not yet added | Pending |
+| Tuples | 8 to 13 | Section B_Tuple folder: q8.py, q9.py, q10, q11.py, q12.py, q13.py | Completed |
+| Dictionaries | 14 to 20 | Not yet added | In processing |
 
-The Section B_Tuple folder is ongoing and not completed. Question 10 is still being checked, and Question 13 has not been written yet.
+The Section B_Tuple folder is completed and covers Questions 8 to 13. The dictionary section (Questions 14 to 20) is in processing.
 
 ## Functions Used in the Project
 
@@ -42,9 +42,10 @@ The table below lists every built-in function, list method, tuple concept, and c
 | [mobile_details()](#mobile_details) | Custom | q9.py | Unpacks a mobile's tuple, displays its details, and shows the price comparison with ₹30,000. |
 | [order_details()](#order_details) | Custom | q11.py | Unpacks an order's tuple, calculates the total order value, and displays the order details. |
 | [cricket_stats()](#cricket_stats) | Custom | q12.py | Calculates the strike rate and reports whether the player scored a half-century. |
+| [attendance_record()](#attendance_record) | Custom | q13.py | Unpacks an employee's tuple, displays the ID and name, and reports whether the employee is present or absent. |
 | [List comprehension](#list-comprehension) | Concept | q1.py, q2.py, q4.py, 5th.py, q7.py | Builds filtered or transformed lists in one readable line instead of a multi-line loop. |
 | [f-strings](#f-strings) | Concept | All files | Inserts variables into text and formats numbers, such as commas and two decimal places. |
-| [Tuple unpacking](#tuple-unpacking) | Concept | q8.py, q9.py, q11.py, q12.py | Assigns each value in a tuple to its own variable in one line. |
+| [Tuple unpacking](#tuple-unpacking) | Concept | q8.py, q9.py, q11.py, q12.py, q13.py | Assigns each value in a tuple to its own variable in one line. |
 | [Variable-length arguments](#variable-length-arguments) | Concept | q12.py | Lets a function accept any number of arguments, which is used here through *player. |
 | [match-case](#match-case) | Concept | q12.py | Chooses the message for a century, a half-century, or neither, based on the runs scored. |
 
@@ -148,6 +149,10 @@ Defined in q11.py in the Section B_Tuple folder. It accepts an order tuple conta
 
 Defined in q12.py in the Section B_Tuple folder. It accepts a player's name, runs, balls, and boundaries, and calculates the strike rate using the formula (runs / balls) × 100. It uses a conditional expression to avoid dividing by zero when no balls were faced. A `match` statement then reports whether the player scored a century, a half-century, or neither. The function uses `*player`, so it can receive the player's details as separate arguments.
 
+### attendance_record()
+
+Defined in q13.py in the Section B_Tuple folder. It accepts an employee record tuple containing the employee ID, name, and attendance status. It unpacks the tuple, displays the ID and name, and reports the status by comparing the text in lowercase, so "Present", "present", and "PRESENT" are all recognised. A tuple keeps the employee's fixed details together as one record.
+
 ## Concepts Used
 
 ### List comprehension
@@ -160,7 +165,7 @@ An f-string places variables inside text by writing `f"..."` and putting the var
 
 ### Tuple unpacking
 
-Tuple unpacking assigns each value in a tuple to a separate variable in one line. For example, `roll_no, name, course, semester = record` gives each field its own name. It is used in q8.py, q9.py, q11.py, and q12.py so that each value can be displayed or calculated easily.
+Tuple unpacking assigns each value in a tuple to a separate variable in one line. For example, `roll_no, name, course, semester = record` gives each field its own name. It is used in q8.py, q9.py, q11.py, q12.py, and q13.py so that each value can be displayed or calculated easily.
 
 ### Variable-length arguments
 
@@ -174,7 +179,7 @@ Variable-length arguments allow a function to accept any number of values. In q1
 
 ### Section B_Tuple folder
 
-The files below are in the Section B_Tuple folder. This section covers the tuple questions and is ongoing, so it is not completed yet.
+The files below are in the Section B_Tuple folder. This section covers the tuple questions (Questions 8 to 13) and is completed.
 
 ### q8.py
 
@@ -186,7 +191,7 @@ Solves Question 9, Mobile Product Details. It uses `mobile_details()` with a sam
 
 ### q10
 
-Solves Question 10, GPS Location Tracking. This file is in progress. It is named `q10` without the `.py` extension, so rename it to `q10.py` before running it with Python. The question asks the program to display a delivery location's latitude and longitude and check whether they fall inside the approximate Kolkata bounding box of latitude 22.4 to 22.8 and longitude 88.2 to 88.5.
+Solves Question 10, GPS Location Tracking. It is part of the completed Section B_Tuple folder. The file is named `q10` without the `.py` extension, so rename it to `q10.py` before running it with Python. The question asks the program to display a delivery location's latitude and longitude and check whether they fall inside the approximate Kolkata bounding box of latitude 22.4 to 22.8 and longitude 88.2 to 88.5.
 
 ### q11.py
 
@@ -195,6 +200,10 @@ Solves Question 11, Product Order Details. It uses `order_details()` with a samp
 ### q12.py
 
 Solves Question 12, Cricket Match Statistics. It uses `cricket_stats()` and asks the user to enter the player's name, runs, balls faced, and boundaries. It prints the details and the strike rate, then reports whether the player scored a century, a half-century, or neither.
+
+### q13.py
+
+Solves Question 13, Employee Attendance Record. It uses `attendance_record()` with a sample tuple containing the employee ID, name, and attendance status. It prints the ID and name, then reports whether the employee is present or absent.
 
 ### q7.py
 
@@ -216,13 +225,13 @@ python "Section B_Tuple/q8.py"
 python "Section B_Tuple/q9.py"
 python "Section B_Tuple/q11.py"
 python "Section B_Tuple/q12.py"
+python "Section B_Tuple/q13.py"
 ```
 
 Files 3, 6, and 12 ask for input when they run, so type a value and press Enter when prompted.
 
 ## Planned Work
 
-- Finish the Section B_Tuple folder: rename q10 to q10.py and confirm its output, then write Question 13 (Employee Attendance Record).
-- Add the dictionary questions (Questions 14 to 20).
+- Complete the dictionary questions (Questions 14 to 20), which are in processing.
 - Replace the sample data with values that the user can enter.
 - Add a main menu that runs every question from one file.
